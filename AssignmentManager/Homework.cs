@@ -4,27 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeworkManager
+namespace AssignmentManager
 {
-	/// <summary>
-	///Group of  problems the student has to solve in order to pass the course. 
-	/// </summary>
 	class Homework
 	{
-		#region properties
 
-
-
-		public string Title { get; set; }
-		public string Description { get; set; }
+		#region Properties
 		/// <summary>
-		/// Problems that have to be solved by dueDate
+		/// State of the Homework
+		/// Open: The Homework hasn’t been solved
+		/// Code: The student has write the code that solve the problem
+		/// Video: The student has record the video explaining how to solve the problem
+		/// Done: Means the student have record the video and have write the code.
 		/// </summary>
-		public Problem[] Problems { get; set; }
-
-
-
-
+		enum StatusType { Open = 0, Code = 1, Video = 2, Done = 3 }
+		public int Status { get; set; }
+		/// <summary>
+		/// Can be used to write something the student has to do, or a feedback received from the teacher, etc.
+		/// </summary>
+		public string Notes { get; set; }
+		/// <summary>
+		/// Date the assignment has to be submitted
+		/// </summary>
+		public DateTime DueDate { get; set; }
+		/// <summary>
+		/// The student can use this date to stablish a personal date to finish the Homework.
+		/// </summary>
+		public DateTime PersonalDueDate { get; set; }
+		public List<HomeworkItem> HomeworkItems { get; }
 		#endregion
 	}
 }

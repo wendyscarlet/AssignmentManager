@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeworkManager
+namespace AssignmentManager
 {
 	/// <summary>
 	/// Person taking classes

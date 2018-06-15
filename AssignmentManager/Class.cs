@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeworkManager
+namespace AssignmentManager
 {
 	class Class
 	{
@@ -24,7 +24,7 @@ namespace HomeworkManager
 		/// <summary>
 		/// List of all the students enrolled in the class
 		/// </summary>
-		public Student [] Students { get; set; }
+		public List <Student> [] Students { get;}
 
 		#endregion
 

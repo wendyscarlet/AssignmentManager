@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeworkManager
+namespace AssignmentManager
 {
 	/// <summary>
 	/// Catalog with all the courses available in the academy.
 	/// </summary>
 	class Course
 	{
+
+		private static int courseNumber = 0;
 		#region Properties
 		/// <summary>
 		/// Unique identification number for the course
 		/// </summary>
-		public int IDNumber { get; set; }
+		public string ID { get; set; }
 		public string Name { get; set; }
 		/// <summary>
 		/// Short Explanation about the course
@@ -25,8 +27,31 @@ namespace HomeworkManager
 		/// How many weeks takes to teach all the content of the course.
 		/// </summary>
 		public int Duration { get; set; }
-		public Homework []  Homework { get; set; }
+		/// <summary>
+		/// All the assignments the student must do in order to pass the course.
+		/// </summary>
+		public List<Assignment> Assignments { get;}
 		#endregion
 
+
+		#region methods
+
+		public Course(string prefixForID,string name, string des, int duration) {
+			ID = prefixForID + courseNumber++;
+			Name = name;
+			Description = des;
+			Duration = duration;
+		}
+
+
+		public void AddAssignment(Assignment a) {
+			Assignments.Add(a);
+			a.Course = this;
+		}
+
+		
+
+
+		#endregion
 	}
 }
