@@ -12,10 +12,11 @@ namespace AssignmentManager
 	class Student
 	{
 		#region properties
+		private static int studentNumber = 0;
 		/// <summary>
 		/// Unique Number that identifies the student
 		/// </summary>
-		public int IDNumber { get; set; }
+		public int ID { get; set; }
 		public string FirstName { get; set; }
 		public string MiddleName { get; set; }
 		public string LastName { get; set; }
@@ -30,12 +31,33 @@ namespace AssignmentManager
 		/// <summary>
 		/// The list of courses the Student is enrolled
 		/// </summary>
-		public Course [] Courses { get; set; }
+		public List <Class>  Classes { get; }
 		/// <summary>
-		/// List of exercises the student must do in order to pass the course
+		/// List of Homeworks the student must do in order to pass the course
 		/// </summary>
-		public Assignment Assignments { get; set; }
+		public List <Homework> Homeworks { get; }
 		#endregion
+
+		#region Methods
+		public Student() {
+			ID = ++studentNumber;
+			Classes = new List<Class>();
+		}
+
+		public void Display() {
+			Console.WriteLine($"ID: {ID}  NAME: {FirstName} {MiddleName} {LastName} Email: {Email}  Address: {Address}");
+		}
+
+		public void EnrollInClass(Class c) {
+			Classes.Add(c);
+		}
+
+		public void DisenrollFromClass(Class c) {
+			Classes.Remove(c);
+		}
+
+		#endregion
+
 
 	}
 }

@@ -37,6 +37,7 @@ namespace AssignmentManager
 
 		#region methods
 
+	
 		public Course(string prefixForID,string name, string des, int duration) {
 			ID = prefixForID + courseNumber++;
 			Name = name;
@@ -50,7 +51,11 @@ namespace AssignmentManager
 			a.Course = this;
 		}
 
-		
+		public void Display() {
+			Console.WriteLine("***********    Course  **********************");
+			Console.WriteLine($"ID: {ID}   Name: {Name}   Duration: {Duration}");
+			Console.WriteLine($"Description: {Description}");
+		}
 
 
 		#endregion

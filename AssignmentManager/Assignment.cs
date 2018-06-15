@@ -23,6 +23,11 @@ namespace AssignmentManager
 
 		#region Methods
 
+		public Assignment() {
+			IDNumber = ID++;
+		}
+
+
 		public Assignment(string title, string desc,Course c) {
 			IDNumber = ID++;
 			Title = title;

@@ -8,7 +8,6 @@ namespace AssignmentManager
 {
 	class Homework
 	{
-
 		#region Properties
 		/// <summary>
 		/// State of the Homework
@@ -32,6 +31,11 @@ namespace AssignmentManager
 		/// </summary>
 		public DateTime PersonalDueDate { get; set; }
 		public List<HomeworkItem> HomeworkItems { get; }
+		#endregion
+
+		#region Methods
+
+
 		#endregion
 	}
 }
