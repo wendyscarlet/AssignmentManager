@@ -27,13 +27,15 @@ namespace AssignmentManager
 		/// </summary>
 		public List <Student> Students { get;}
 
+		public Course Course { get; set; }
 		#endregion
 
 		#region Methods
 
-		
-		
-		public Class(string classPrefix,DateTime startDate, DateTime finishDate) {
+
+
+		public Class(string classPrefix,DateTime startDate, DateTime finishDate, Course c) {
+			Students = new List<Student>();
 			ID = classPrefix + ++classNumber;
 
 			if (startDate < DateTime.Today)
@@ -44,13 +46,13 @@ namespace AssignmentManager
 
 			StartDate = startDate;
 			FinishDate = finishDate;
-			Students = new List<Student>();
-
+			Course = c;
+		
 		}
 
 		public void Display() {
 	
-			Console.WriteLine($"CLASS  ID: {ID}   StartDate: {StartDate}   FinishDate: {FinishDate}");
+			Console.WriteLine($"CLASS  ID: {ID} Course: {Course.Name}  StartDate: {StartDate}   FinishDate: {FinishDate}");
 		}
 
 		public void DisplayStudents() {

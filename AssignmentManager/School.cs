@@ -16,8 +16,8 @@ namespace AssignmentManager
 			return  new Course(prefixForID,name,desc,duration);
 		}
 
-		public static Class CreateClass(string classPrefix, DateTime startDate, DateTime finishDate) {
-			return new Class(classPrefix, startDate, finishDate);
+		public static Class CreateClass(string classPrefix, DateTime startDate, DateTime finishDate,Course c) {
+			return new Class(classPrefix, startDate, finishDate,c);
 		}
 
 		public static Assignment CreateAssignment(string title, string desc, Course c) {

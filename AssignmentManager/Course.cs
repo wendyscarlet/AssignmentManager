@@ -43,6 +43,7 @@ namespace AssignmentManager
 			Name = name;
 			Description = des;
 			Duration = duration;
+		
 		}
 
 
