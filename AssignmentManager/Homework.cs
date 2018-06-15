@@ -31,9 +31,17 @@ namespace AssignmentManager
 		/// </summary>
 		public DateTime PersonalDueDate { get; set; }
 		public List<HomeworkItem> HomeworkItems { get; }
+		public List<Assignment> Assignments { get; }
 		#endregion
 
 		#region Methods
+
+		public Homework() {
+			Assignments = new List<Assignment>();
+			HomeworkItems = new List<HomeworkItem>();
+
+		}
+
 
 
 		#endregion

@@ -14,7 +14,7 @@ namespace AssignmentManager
 
 		private static int ID = 0;
 		#region Properties
-		public int IDNumber { get; set; }
+		public int IDNumber { get; private set; }
 		public string Description { get; set; }
 		public string Title  { get; set; }
 		public Course Course { get; set; }

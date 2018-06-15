@@ -13,7 +13,7 @@ namespace AssignmentManager
 		/// <summary>
 		/// Unique identifier
 		/// </summary>
-		public string ID { get; set; }
+		public string ID { get; private set; }
 		/// <summary>
 		/// First day of class
 		/// </summary>

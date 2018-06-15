@@ -18,7 +18,7 @@ namespace AssignmentManager
 		#region properties	
 
 		static private int ProblemID = 0;
-		public int ID { get; set; }
+		public int ID { get; private set; }
 		public string Description { get; set; }
 		/// <summary>
 		/// Classification of the problem.

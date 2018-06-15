@@ -18,7 +18,7 @@ namespace AssignmentManager
 		/// <summary>
 		/// Unique identification number for the course
 		/// </summary>
-		public string ID { get; set; }
+		public string ID { get; private set; }
 		public string Name { get; set; }
 		/// <summary>
 		/// Short Explanation about the course

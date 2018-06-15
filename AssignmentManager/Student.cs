@@ -16,7 +16,7 @@ namespace AssignmentManager
 		/// <summary>
 		/// Unique Number that identifies the student
 		/// </summary>
-		public int ID { get; set; }
+		public int ID { get; private set; }
 		public string FirstName { get; set; }
 		public string MiddleName { get; set; }
 		public string LastName { get; set; }
