@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssignmentManager
 {
-
+	/// <summary>
+	/// Catalog with the assignments for each course
+	/// </summary>
 	class Assignment
 	{
 
@@ -29,14 +31,13 @@ namespace AssignmentManager
 		}
 
 		public void AddProblem(Problem p) {
-			Problems.Add(p);
+			Problems.Add(p);		
 		}
 
 		public void RemoveProblem(Problem p) {
 			Problems.Remove(p);
 		}
 		
-
 		#endregion
 	}
 }

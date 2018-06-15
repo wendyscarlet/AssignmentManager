@@ -12,8 +12,9 @@ namespace AssignmentManager
 	class Course
 	{
 
-		private static int courseNumber = 0;
+
 		#region Properties
+		private static int courseNumber = 0;
 		/// <summary>
 		/// Unique identification number for the course
 		/// </summary>
