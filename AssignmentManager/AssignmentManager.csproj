@@ -46,8 +46,9 @@
     <Compile Include="Class.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Homework.cs" />
+    <Compile Include="Factory\HomeworkFactory.cs" />
     <Compile Include="HomeworkItem.cs" />
-    <Compile Include="School.cs" />
+    <Compile Include="Factory\School.cs" />
     <Compile Include="Problem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

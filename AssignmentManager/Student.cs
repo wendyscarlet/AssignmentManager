@@ -42,11 +42,22 @@ namespace AssignmentManager
 		public Student() {
 			ID = ++studentNumber;
 			Classes = new List<Class>();
+			Homeworks = new List<Homework>();
 		}
 
 		public void Display() {
-			Console.WriteLine($"ID: {ID}  NAME: {FirstName} {MiddleName} {LastName} Email: {Email}  Address: {Address}");
+			Console.WriteLine($"ID: {ID}  NAME: {FirstName} {MiddleName} {LastName} EMAIL: {Email}  ADDRESS: {Address}");
 		}
+		public void DisplayHomework() {
+			foreach (Homework h in Homeworks) {
+				Console.WriteLine("---- HOMEWORK ------");
+				h.Display();
+				Console.WriteLine("--ITEMS--");
+				h.DisplayItems();
+			}
+
+		}
+
 
 		public void EnrollInClass(Class c) {
 			Classes.Add(c);
@@ -54,6 +65,15 @@ namespace AssignmentManager
 
 		public void DisenrollFromClass(Class c) {
 			Classes.Remove(c);
+		}
+
+		public void AddHomework(Homework h) {
+			Homeworks.Add(h);
+		}
+
+		public void RemoveHomework(Homework h)
+		{
+			Homeworks.Remove(h);
 		}
 
 		#endregion

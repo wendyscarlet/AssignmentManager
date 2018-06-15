@@ -18,6 +18,7 @@ namespace AssignmentManager
 		public string Description { get; set; }
 		public string Title  { get; set; }
 		public Course Course { get; set; }
+		public int WeekNumber { get; set; }
 		public List<Problem> Problems { get; }
 		#endregion
 
@@ -27,14 +28,30 @@ namespace AssignmentManager
 			IDNumber = ID++;
 		}
 
-
-		public Assignment(string title, string desc,Course c) {
+		public Assignment(string title, string desc, Course c,int weekNumber)
+		{
 			IDNumber = ID++;
 			Title = title;
 			Description = desc;
 			Course = c;
+			WeekNumber = weekNumber;
+			Problems = new List<Problem>();
 		}
 
+
+		public void Display() {
+			
+			Console.WriteLine($"ID: {IDNumber} TITLE: {Title}  DESC: {Description} COURSE: {Course.Name} ");
+		}
+
+		public void DisplayProblems() {
+			Console.WriteLine("PROBLEMS");
+			foreach (Problem p in Problems) {
+				Console.WriteLine($" DS: {p.DataStructure} - {p.Description}");
+			}
+		}
+
+		
 		public void AddProblem(Problem p) {
 			Problems.Add(p);		
 		}

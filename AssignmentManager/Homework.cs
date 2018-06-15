@@ -6,21 +6,14 @@ using System.Threading.Tasks;
 
 namespace AssignmentManager
 {
+	 
 	class Homework
 	{
 		#region Properties
-		/// <summary>
-		/// State of the Homework
-		/// Open: The Homework hasn’t been solved
-		/// Code: The student has write the code that solve the problem
-		/// Video: The student has record the video explaining how to solve the problem
-		/// Done: Means the student have record the video and have write the code.
-		/// </summary>
-		enum StatusType { Open = 0, Code = 1, Video = 2, Done = 3 }
-		public int Status { get; set; }
+		public bool Done  { get; set; }
 		/// <summary>
 		/// Can be used to write something the student has to do, or a feedback received from the teacher, etc.
-		/// </summary>
+		/// </summary>								   
 		public string Notes { get; set; }
 		/// <summary>
 		/// Date the assignment has to be submitted
@@ -31,18 +24,37 @@ namespace AssignmentManager
 		/// </summary>
 		public DateTime PersonalDueDate { get; set; }
 		public List<HomeworkItem> HomeworkItems { get; }
-		public List<Assignment> Assignments { get; }
+		public Assignment Assignment { get; set; }
 		#endregion
 
 		#region Methods
 
 		public Homework() {
-			Assignments = new List<Assignment>();
+		
 			HomeworkItems = new List<HomeworkItem>();
 
 		}
 
+		public void Display() {
+			Console.WriteLine($"DUEDATE: {DueDate} Done: {Done}  NOTES: {Notes}  PERSONALDUEDATE: {PersonalDueDate}");
+		}
 
+		public void DisplayItems() {
+
+			foreach (HomeworkItem hi in HomeworkItems) {
+				hi.Display();
+			}
+		}
+
+		public void AddHomeworkItems(HomeworkItem hwi) {
+			HomeworkItems.Add(hwi);
+		}
+
+		public void RemoveHomeworkItems(HomeworkItem hwi)
+		{
+			HomeworkItems.Remove(hwi);
+		}
+		
 
 		#endregion
 	}

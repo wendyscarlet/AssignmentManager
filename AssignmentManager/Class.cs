@@ -52,11 +52,11 @@ namespace AssignmentManager
 
 		public void Display() {
 	
-			Console.WriteLine($"CLASS  ID: {ID} Course: {Course.Name}  StartDate: {StartDate}   FinishDate: {FinishDate}");
+			Console.WriteLine($"CLASS  ID: {ID} COURSE: {Course.Name}  START: {StartDate}   FINISH: {FinishDate}");
 		}
 
 		public void DisplayStudents() {
-			Console.WriteLine("Students");
+			Console.WriteLine("STUDENTS");
 			foreach (Student s in Students) {
 				s.Display();
 			}

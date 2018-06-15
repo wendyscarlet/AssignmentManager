@@ -43,7 +43,7 @@ namespace AssignmentManager
 			Name = name;
 			Description = des;
 			Duration = duration;
-		
+			Assignments = new List<Assignment>();
 		}
 
 
@@ -53,11 +53,17 @@ namespace AssignmentManager
 		}
 
 		public void Display() {
-			Console.WriteLine("***********    Course  **********************");
-			Console.WriteLine($"ID: {ID}   Name: {Name}   Duration: {Duration}");
-			Console.WriteLine($"Description: {Description}");
+			Console.WriteLine("*********** COURSE  *****************");
+			Console.WriteLine($"ID: {ID}   NAME: {Name}   DURATION: {Duration}");
+			Console.WriteLine($"DESCRIPTION: {Description}");
 		}
 
+		public void DisplayAssignments() {
+			Console.WriteLine("ASSIGNMENTS OF THE COURSE");
+			foreach (Assignment a in Assignments) {
+				a.Display();
+			}
+		}
 
 		#endregion
 	}
